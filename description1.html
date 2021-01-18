@@ -1,0 +1,53 @@
+<style>
+h1 {
+    margin: 0.5em 0 0 0;
+    color: #2e484c;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0d8ba1;
+}
+a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: #1a5952;
+}
+a:hover, a:focus, a:active {
+    text-decoration: underline;
+    color: #9685BA;
+}
+p {
+    font: "Libre Baskerville", sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 80%;
+    max-width: 800;
+}
+
+</style>
+
+<h1>An Interactive Explorer for TV Series Data (Embedding Explorer)</h1>
+
+<p>
+The following visualization presents a 2D representation, obtained through <b>PCA</b>, of various TV series.
+This representation was created by aggregating 96-dimensional spaCy word embeddings, 
+representing both titles and genres of over <b>100,000</b> TV series. An additional temporal (or <a href="https://kazemnejad.com/blog/transformer_architecture_positional_encoding/">positional</a>) 
+embedding representing the starting years of each series was also added to the aggregated embedding to account for both textual and temporal contextualization. 
+</p>
+<p>
+Each color denotes 1 of 7 clusters determined by application of 
+Gaussian Mixture Models on the final embeddings. This generative algorithm assigns probabilities of membership to each cluster, 
+also allowing for the entropy of each individual TV series to be computed. 
+</p>
+<p>
+Interact with the widgets on the left to query a subset of TV series to visualize.
+Hover over the circles to see more information about each series.
+</p>
+<p>
+Inspired by the <a href="https://demo.bokeh.org/movies">Bokeh Movies Example Application</a>.
+<i>(Data from <a href="https://www.imdb.com/interfaces/">IMDB</a>)</i>
+<br />
